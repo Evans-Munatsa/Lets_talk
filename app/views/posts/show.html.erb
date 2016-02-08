@@ -1,0 +1,14 @@
+<div class='wrapper_with_padding'>
+  <div id='note_show'>
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <%= @post.description %>
+    </p>
+
+    <% if user_signed_in? %>
+      <%= link_to 'Edit', edit_post_path(@post), class: "button" %> 
+      <%= link_to 'Back', posts_path, class: "button" %>
+    <% end %>
+  </div>
+</div>

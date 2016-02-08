@@ -11,6 +11,7 @@ $green: #33CD99;
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
+  text-align: -webkit-center;
 }
 
 body {
@@ -108,7 +109,7 @@ footer {
 }
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
-  width: 100%;
+  width: 60%;
   margin-bottom: 1rem;
   border: 1px solid $light_gray;
   border-radius: .4rem;

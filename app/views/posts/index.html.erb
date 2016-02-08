@@ -1,0 +1,21 @@
+<div class='wrapper_with_padding'>
+  <div id='notes.clearfix'>
+  <p id="notice"><%= notice %></p>
+
+  <h1>All Posts</h1>
+    <% @posts.each do |post| %><br>
+    <hr>
+    <br>
+      <h4><%= post.description %></h4><br>
+      <button><%= link_to 'Show', post %></button>
+      <% if user_signed_in? %>
+        <button><%= link_to 'Edit', edit_post_path(post) %></button>
+        <button><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+      <% end %>    
+    <% end %>
+  </div>
+</div>
+
+<br>
+<br>
+<button><%= link_to 'New Post', new_post_path %></button>
