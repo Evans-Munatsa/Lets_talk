@@ -3,8 +3,9 @@
     <p id="notice"><%= notice %></p>
 
     <p>
+      <%= image_tag @post.image.url(:medium) %><br>
       <%= @post.description %>
-    </p>
+    </p><br>
 
     <% if user_signed_in? %>
       <%= link_to 'Edit', edit_post_path(@post), class: "button" %> 
